@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posterum — Automatiza tus conversaciones</title>
+    <meta
+      name="description"
+      content="Agentes de IA que atienden prospectos en menos de 1 minuto, 24/7. Integrados a WhatsApp, Instagram y tu CRM."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__content">
+        <a class="logo" href="#" aria-label="Posterum">
+          <span class="logo__text">POSTERUM</span>
+        </a>
+
+        <nav class="header__nav" aria-label="Navegación principal">
+          <a class="header__link" href="#que-hacemos">Qué hacemos</a>
+          <a class="header__link" href="#como-trabajamos">Cómo trabajamos</a>
+          <a class="header__link" href="#planes">Planes</a>
+          <a class="btn btn--link header__cta" data-wa href="#">
+            Pruébalo
+          </a>
+        </nav>
+
+        <button class="header__burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+
+      <!-- Menú mobile -->
+      <div class="header__mobile" data-mobile hidden>
+        <div class="container header__mobile-inner">
+          <a class="header__mobile-link" href="#que-hacemos" data-close>Qué hacemos</a>
+          <a class="header__mobile-link" href="#como-trabajamos" data-close>Cómo trabajamos</a>
+          <a class="header__mobile-link" href="#planes" data-close>Planes</a>
+          <a class="btn btn--primary header__mobile-cta" data-wa href="#" data-close>Agendar demo</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero -->
+      <section class="hero" id="inicio">
+        <div class="container hero__content">
+          <h1 class="hero__title">
+            ¿Quieres automatizar tus conversaciones?
+            <span class="hero__title-accent">POSTERUM es tu solución</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Agentes de IA que atienden a tus prospectos en menos de 1 minuto, 24/7. 
+            Resolvemos dudas repetitivas, preparamos al lead y entregamos solo contactos
+            realmente listos para comprar.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" data-wa href="#">Pruébalo</a>
+          </div>
+        </div>
+
+        <div class="hero__bg" aria-hidden="true"></div>
+      </section>
+
+      <!-- Integraciones -->
+      <section class="section section--tight" id="integraciones">
+        <div class="container">
+          <h2 class="section__title">
+            Automatiza respuestas repetitivas en tus canales de atención al cliente
+          </h2>
+
+          <div class="channels">
+            <article class="channel-card">
+              <div class="channel-card__icon channel-card__icon--wa" aria-hidden="true">
+                <!-- WhatsApp icon -->
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 0 0-8.66 15l-.84 3.06A1 1 0 0 0 3.7 21l3.2-.81A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.08-1.12l-.3-.18-2.35.6.62-2.25-.2-.33A8 8 0 1 1 12 20Zm4.52-5.28c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.97-.15.17-.3.2-.55.08a6.52 6.52 0 0 1-1.92-1.18 7.22 7.22 0 0 1-1.33-1.65c-.14-.25 0-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.57-1.37-.78-1.88-.2-.48-.4-.41-.57-.42h-.49c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.08s.9 2.41 1.03 2.58c.12.17 1.77 2.7 4.28 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.14-1.18-.06-.11-.23-.17-.48-.29Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="channel-card__title">WhatsApp</h3>
+            </article>
+
+            <article class="channel-card">
+              <div class="channel-card__icon channel-card__icon--ig" aria-hidden="true">
+                <!-- Instagram icon -->
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    fill="currentColor"
+                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 4.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6ZM18 6.7a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8ZM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="channel-card__title">Instagram</h3>
+            </article>
+
+            <article class="channel-card">
+              <div class="channel-card__icon channel-card__icon--fb" aria-hidden="true">
+                <!-- Facebook icon -->
+                <svg viewBox="0 0 24 24" class="icon">
+                  <path
+                    fill="currentColor"
+                    d="M13 22v-8h3l1-4h-4V7.5A1.5 1.5 0 0 1 14.5 6H17V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="channel-card__title">Facebook</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement 1 -->
+      <section class="statement">
+        <div class="container statement__content">
+          <h2 class="statement__title">El poder de la respuesta inmediata</h2>
+          <p class="statement__subtitle">Cada minuto sin respuesta es una oportunidad perdida.</p>
+        </div>
+      </section>
+
+      <!-- Qué hacemos -->
+      <section class="section" id="que-hacemos">
+        <div class="container">
+          <h2 class="section__title section__title--center">Qué hacemos</h2>
+          <p class="section__subtitle section__subtitle--center">
+            Transformamos la manera en que atiendes a tus clientes
+          </p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-card__badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--blue">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm1 11h4l-5 7v-7H7l5-9v7Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Atendemos</h3>
+              <ul class="feature-card__list">
+                <li>Respuesta inmediata (&lt;1 min) y 24/7</li>
+                <li>Respondemos dudas frecuentes</li>
+                <li>Información consistente</li>
+                <li>Calidad uniforme</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--blue">
+                  <path
+                    fill="currentColor"
+                    d="M3 4h18v2H3V4Zm2 5h14l-5 6v5l-4-2v-3L5 9Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Filtramos y preparamos</h3>
+              <ul class="feature-card__list">
+                <li>Detectamos intención real</li>
+                <li>Recopilamos datos clave</li>
+                <li>Guiamos al prospecto</li>
+                <li>Seguimiento automático</li>
+              </ul>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--blue">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.3 7.3-5.1 5.7a1 1 0 0 1-1.5 0L7.7 13a1 1 0 1 1 1.4-1.4l1.1 1.1 4.4-4.9a1 1 0 1 1 1.5 1.5Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature-card__title">Entregamos leads listos</h3>
+              <ul class="feature-card__list">
+                <li>Leads filtrados y priorizados</li>
+                <li>Registro automático</li>
+                <li>Asignación a agentes</li>
+                <li>Historial completo</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statement 2 -->
+      <section class="statement">
+        <div class="container statement__content">
+          <h2 class="statement__title">Tu negocio sigue activo, incluso cuando duermes.</h2>
+          <p class="statement__subtitle">Tus agentes descansan, pero tu atención no.</p>
+        </div>
+      </section>
+
+      <!-- Cómo trabajamos -->
+      <section class="section" id="como-trabajamos">
+        <div class="container">
+          <h2 class="section__title section__title--center">Cómo trabajamos</h2>
+          <p class="section__subtitle section__subtitle--center">
+            Un proceso claro y efectivo para tu éxito
+          </p>
+
+          <div class="timeline">
+            <div class="timeline__line" aria-hidden="true"></div>
+
+            <article class="timeline__item timeline__item--left">
+              <div class="timeline__dot">01</div>
+              <div class="timeline__card">
+                <h3 class="timeline__title">Levantamiento</h3>
+                <p class="timeline__text">
+                  Revisamos procesos, preguntas frecuentes y estilo de atención.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline__item timeline__item--right">
+              <div class="timeline__dot">02</div>
+              <div class="timeline__card">
+                <h3 class="timeline__title">Propuesta</h3>
+                <p class="timeline__text">Diseñamos flujos, reglas y automatizaciones.</p>
+              </div>
+            </article>
+
+            <article class="timeline__item timeline__item--left">
+              <div class="timeline__dot">03</div>
+              <div class="timeline__card">
+                <h3 class="timeline__title">Piloto + Ajustes</h3>
+                <p class="timeline__text">Probamos en canal real y refinamos.</p>
+              </div>
+            </article>
+
+            <article class="timeline__item timeline__item--right">
+              <div class="timeline__dot">04</div>
+              <div class="timeline__card">
+                <h3 class="timeline__title">Implementación &amp; Soporte</h3>
+                <p class="timeline__text">Lanzamiento y mejora continua.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section class="results" aria-label="Resultados que importan">
+        <div class="container">
+          <h2 class="results__title">Resultados que importan</h2>
+          <p class="results__subtitle">Los números hablan por sí solos</p>
+
+          <div class="results__grid">
+            <article class="metric-card">
+              <div class="metric-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--white">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v5l4 2-.8 1.6L11 13V7h2Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="metric-card__value">&lt;1 min</h3>
+              <p class="metric-card__label">Tiempo de respuesta</p>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--white">
+                  <path
+                    fill="currentColor"
+                    d="M4 19h16v2H4v-2Zm2-2V3h2v14H6Zm5 0V7h2v10h-2Zm5 0V10h2v7h-2Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="metric-card__value">82%</h3>
+              <p class="metric-card__label">Prospectos esperan respuesta &lt;10 min</p>
+            </article>
+
+            <article class="metric-card">
+              <div class="metric-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="icon icon--white">
+                  <path
+                    fill="currentColor"
+                    d="M13 2 3 14h8l-1 8 11-14h-8l0-6Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="metric-card__value">21×</h3>
+              <p class="metric-card__label">Más efectivo responder rápido</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section class="section" aria-label="Testimonios">
+        <div class="container">
+          <h2 class="section__title section__title--center">Lo que dicen nuestros clientes</h2>
+          <p class="section__subtitle section__subtitle--center">
+            Empresas que ya transformaron su atención al cliente
+          </p>
+
+          <div class="testimonials">
+            <button class="testimonials__arrow" type="button" aria-label="Anterior" data-prev>
+              ‹
+            </button>
+
+            <div class="testimonials__viewport" aria-live="polite">
+              <article class="testimonial-card" data-testimonial>
+                <!-- JS render -->
+              </article>
+
+              <article class="testimonial-card" data-testimonial>
+                <!-- JS render -->
+              </article>
+            </div>
+
+            <button class="testimonials__arrow" type="button" aria-label="Siguiente" data-next>
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA final -->
+      <section class="cta">
+        <div class="container cta__content">
+          <h2 class="cta__title">¿Listo para automatizar?</h2>
+          <p class="cta__subtitle">Descubre cómo podemos transformar tu negocio</p>
+          <a class="btn btn--primary btn--xl" data-wa href="#">Pruébalo</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Planes -->
+      <section class="section" id="planes">
+        <div class="container">
+          <h2 class="section__title section__title--center">Planes de inversión</h2>
+          <p class="section__subtitle section__subtitle--center">
+            Elige el plan que mejor se adapte a tus necesidades
+          </p>
+
+          <div class="pricing">
+            <article class="price-card">
+              <h3 class="price-card__title">Recepcionista</h3>
+              <p class="price-card__price">$1,699 MXN</p>
+              <p class="price-card__note">Mensual</p>
+
+              <ul class="price-card__list">
+                <li>Para preguntas frecuentes e info repetitiva</li>
+                <li>Integración segura con plataformas</li>
+                <li>CRM incluido</li>
+                <li>Capacitación del equipo</li>
+              </ul>
+            </article>
+
+            <article class="price-card price-card--featured" aria-label="Plan Base (más popular)">
+              <div class="price-card__tag">Más popular</div>
+
+              <h3 class="price-card__title price-card__title--inverse">Calendario</h3>
+              <p class="price-card__price price-card__price--inverse">$2,500 MXN</p>
+              <p class="price-card__note price-card__note--inverse">Mensual</p>
+
+              <ul class="price-card__list price-card__list--inverse">
+                <li>Para Agendar citas y todo lo del Recepcionista</li>
+                <li>Notificaciones</li>
+                <li>Monitoreo continuo</li>
+                <li>Ajustes menores</li>
+                <li>Soporte técnico</li>
+              </ul>
+            </article>
+
+            <article class="price-card">
+              <h3 class="price-card__title">Plan a la medida</h3>
+              <p class="price-card__price">Personalizado</p>
+              <p class="price-card__note">Empresas con alto volumen</p>
+
+              <ul class="price-card__list">
+                <li>Todo lo del Plan Base</li>
+                <li>Volumen sin límite</li>
+                <li>Integraciones avanzadas</li>
+                <li>Soporte prioritario</li>
+                <li>Consultoría estratégica</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+      <div class="container footer__grid">
+        <div class="footer__col">
+          <h3 class="footer__brand">Posterum</h3>
+          <p class="footer__text">Automatización con agentes de IA para servicio al cliente y ventas.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Contacto</h4>
+          <ul class="footer__links">
+            <li><a class="footer__link" href="#contacto">+52 9931096924</a></li>
+            <li><a class="footer__link" href="#contacto">+52 2218654513</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Integraciones</h4>
+          <ul class="footer__links">
+            <li><span class="footer__muted">Meta Business API</span></li>
+            <li><span class="footer__muted">Whatsapp | Instagram | Facebook</span></li>
+            <li><span class="footer__muted">Google cloud</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <span class="footer__copy">© <span data-year></span> Posterum. Todos los derechos reservados.</span>
+      </div>
+    </footer>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
