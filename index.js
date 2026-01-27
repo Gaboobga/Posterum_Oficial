@@ -70,17 +70,60 @@ function renderTestimonial(cardEl, data) {
 }
 
 function mountTestimonials() {
-  const cards = document.querySelectorAll("[data-testimonial]");
-  if (!cards.length) return;
+  const viewport = document.querySelector(".testimonials__viewport");
+  const track = document.querySelector(".testimonials__track");
+  if (!viewport || !track) return;
 
-  const update = () => {
+  // Obtener las tarjetas existentes
+  let cards = Array.from(track.querySelectorAll("[data-testimonial]"));
+  
+  // Crear tarjetas duplicadas para carrusel infinito
+  // Necesitamos al menos 2 veces el número de testimonios para que funcione suavemente
+  const totalCardsNeeded = testimonials.length * 2;
+  while (cards.length < totalCardsNeeded) {
+    const newCard = document.createElement("article");
+    newCard.className = "testimonial-card";
+    newCard.setAttribute("data-testimonial", "");
+    track.appendChild(newCard);
+    cards.push(newCard);
+  }
+  
+  // Obtener el gap actual según el breakpoint
+  const getGap = () => {
+    if (window.innerWidth <= 544) return 14;
+    if (window.innerWidth <= 768) return 16;
+    return 18;
+  };
+
+  // Calcular el ancho de cada tarjeta incluyendo gap
+  const getCardWidth = () => {
+    if (cards.length === 0) return 0;
+    const viewportWidth = viewport.offsetWidth;
+    const gap = getGap();
+    const cardsPerView = window.innerWidth <= 768 ? 1 : 2;
+    const cardWidth = (viewportWidth - gap * (cardsPerView - 1)) / cardsPerView;
+    return cardWidth + gap;
+  };
+
+  // Actualizar contenido de todas las tarjetas
+  const updateContent = () => {
     cards.forEach((card, idx) => {
-      const item = testimonials[(cursor + idx) % testimonials.length];
+      const item = testimonials[idx % testimonials.length];
       renderTestimonial(card, item);
     });
   };
 
-  update();
+  const updatePosition = () => {
+    const cardWidth = getCardWidth();
+    // Usar módulo para crear bucle infinito
+    const normalizedCursor = cursor % testimonials.length;
+    const translateX = -(normalizedCursor * cardWidth);
+    track.style.transform = `translateX(${translateX}px)`;
+  };
+
+  // Inicializar
+  updateContent();
+  updatePosition();
 
   const prevBtn = document.querySelector("[data-prev]");
   const nextBtn = document.querySelector("[data-next]");
@@ -88,16 +131,25 @@ function mountTestimonials() {
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
       cursor = (cursor - 1 + testimonials.length) % testimonials.length;
-      update();
+      updatePosition();
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       cursor = (cursor + 1) % testimonials.length;
-      update();
+      updatePosition();
     });
   }
+
+  // Actualizar posición en resize
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      updatePosition();
+    }, 150);
+  });
 }
 
 // ======= Mobile menu =======

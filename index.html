@@ -35,6 +35,9 @@
         </nav>
 
         <button class="header__burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <svg class="header__burger-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 15H21M3 9H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span class="header__burger-line"></span>
           <span class="header__burger-line"></span>
           <span class="header__burger-line"></span>
@@ -153,7 +156,7 @@
               </div>
               <h3 class="feature-card__title">Atendemos</h3>
               <ul class="feature-card__list">
-                <li>Respuesta inmediata (&lt;1 min) y 24/7</li>
+                <li>Respuesta inmediata (menos de 1 min) y 24/7</li>
                 <li>Respondemos dudas frecuentes</li>
                 <li>Información consistente</li>
                 <li>Calidad uniforme</li>
@@ -190,9 +193,9 @@
               <h3 class="feature-card__title">Entregamos leads listos</h3>
               <ul class="feature-card__list">
                 <li>Leads filtrados y priorizados</li>
-                <li>Registro automático</li>
+                <li>Registro automático en base de datos</li>
                 <li>Asignación a agentes</li>
-                <li>Historial completo</li>
+                <li>Notificaciones automáticas</li>
               </ul>
             </article>
           </div>
@@ -318,13 +321,15 @@
             </button>
 
             <div class="testimonials__viewport" aria-live="polite">
-              <article class="testimonial-card" data-testimonial>
-                <!-- JS render -->
-              </article>
+              <div class="testimonials__track">
+                <article class="testimonial-card" data-testimonial>
+                  <!-- JS render -->
+                </article>
 
-              <article class="testimonial-card" data-testimonial>
-                <!-- JS render -->
-              </article>
+                <article class="testimonial-card" data-testimonial>
+                  <!-- JS render -->
+                </article>
+              </div>
             </div>
 
             <button class="testimonials__arrow" type="button" aria-label="Siguiente" data-next>
@@ -388,10 +393,10 @@
               <p class="price-card__note">Empresas con alto volumen</p>
 
               <ul class="price-card__list">
-                <li>Todo lo del Plan Base</li>
+                <li>Todo lo de los planes anteriores</li>
                 <li>Volumen sin límite</li>
                 <li>Integraciones avanzadas</li>
-                <li>Soporte prioritario</li>
+                <li>Pagos</li>
                 <li>Consultoría estratégica</li>
               </ul>
             </article>
